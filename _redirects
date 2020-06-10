@@ -1,0 +1,13 @@
+# for most SPAs w internal routing
+[[redirects]]
+  from = "/"
+  to = "https://api.nomics.com"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+
+# paths covered
+[[headers]]
+  for = "/*"
+  [headers.values]
+  Access-Control-Allow-Origin = "https://api.nomics.com"
